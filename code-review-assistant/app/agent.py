@@ -113,7 +113,7 @@ def save_code_review(
     return f"Successfully saved code review '{review_id}' to Firestore."
 
 
-RAG_CORPUS_NAME = "projects/977430187658/locations/us-central1/ragCorpora/7554832355379118080"
+RAG_CORPUS_NAME = "projects/977430187658/locations/us-central1/ragCorpora/3945197254041665536"
 
 
 def consult_pr_guidelines(query: str) -> str:
