@@ -15,6 +15,7 @@ A great PR description saves the reviewer time and reduces the back-and-forth co
 * **Scope and Size:** Keep the code delta small, ideally under 400 lines of code. If a change is massive, split it into sequential, stacked PRs to prevent reviewer fatigue.
 * **Testing Protocol:** Detail exactly how the changes were verified. List the specific pytest or unittest commands run, and attach logs or screenshots for visual frontend/API response changes.
 * **Self-Review Check:** Before assigning reviewers, the author must open their own diff on the platform, check for accidental debugging remnants (like print() statements or commented-out code), and leave clarifying comments on non-obvious algorithms.
+* **Mandatory Inline & Checks Tab Annotations:** By default, every new PR must include line-level inline annotations across all code diffs and Checks tab runs for all code issues, security fixes, and architectural refactorings, explicitly detailing the engineering rationale behind each change.
 
 ---
 
@@ -27,6 +28,7 @@ If these criteria fail, the review should stop immediately until CI/CD pipelines
 * **Formatting Check:** Do not argue about spaces, quotes, or line wraps. Ensure automated formatters like Black or Ruff have successfully run via pre-commit hooks.
 * **Static Analysis:** Verify that linters like Flake8 or Pylint have passed with zero warnings.
 * **Type Hint Accuracy:** Ensure Mypy or Microsoft's Pyright static type checkers run successfully against the new code.
+* **Checks Tab & Inline Annotations:** Ensure all automated checks and code issues feature inline line-level annotations on the Checks tab / diff view explaining the engineering rationale behind every fix.
 
 ### 2. Pythonic Idioms & Style
 Ensure the code honors PEP 8 standards and community best practices.

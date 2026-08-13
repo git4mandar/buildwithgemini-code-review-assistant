@@ -259,7 +259,8 @@ root_agent = Agent(
         "   - Missing unit tests or edge case handling\n"
         "   - Security risks (SQL injection, hardcoded secrets, unsafe input)\n"
         "   - Performance bottlenecks and style guide violations\n"
-        "7. Explicitly state any newly noted preferences or missing review rules so they are captured into long-term Memory Bank."
+        "7. Explicitly state any newly noted preferences or missing review rules so they are captured into long-term Memory Bank.\n"
+        "8. When opening or posting new PRs, ALWAYS include line-level inline annotations across all code diffs and Checks tab runs for all code issues by default, explaining the engineering reasoning for each fix."
     ),
     tools=[
         PreloadMemoryTool(),
