@@ -169,7 +169,7 @@ def run_linter_check(code_snippet: str) -> dict:
             if ":" in stripped and not ('"""' in code_snippet or "'''" in code_snippet):
                 missing_docstrings.append(f"Function '{func_name}' is missing Google-style docstring.")
 
-        if "eval(" in stripped or "exec(" in stripped:
+        if ("eval(" in stripped and "literal_eval" not in stripped and "_eval" not in stripped) or "exec(" in stripped:
             security_risks.append("Security risk: Use of dynamic execution (eval/exec) detected.")
         if "SELECT" in stripped and "+" in stripped:
             security_risks.append("Security risk: Potential SQL injection via string concatenation.")
